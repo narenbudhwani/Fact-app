@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="#51b46d"
+    tools:context=".FunFactsActivity"
+    android:id="@+id/relativeLayout">
+
+    <TextView
+        android:text="Did you know ?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="#80ffffff"
+        android:layout_above="@+id/factTextView"
+        android:layout_alignLeft="@+id/factTextView"
+        android:layout_alignStart="@+id/factTextView"
+        android:layout_marginBottom="90dp"
+        android:paddingLeft="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ants strech in the morning when they wake up!"
+        android:id="@+id/factTextView"
+        android:textSize="24sp"
+        android:textColor="#ffffff"
+        android:padding="20dp"
+        android:layout_centerVertical="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Show next Amazing Fact!  "
+        android:id="@+id/showFactButton"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp" />
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:accessibilityLiveRegion="@integer/google_play_services_version">
+    </com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>
